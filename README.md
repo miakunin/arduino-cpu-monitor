@@ -42,32 +42,27 @@ Real-time CPU temperature and load monitoring on LCD display via Arduino Pro Mic
 ### 2. Python Setup
 
 **Install dependencies**
+
     sudo apt install python3-serial python3-psutil
 
 **Or using pip**
+
     pip3 install -r requirements.txt
 
 ## Run
 
 **Test run**
+  
   python3 python/cpu_temp_monitor.py
 
 **Install as service (optional)**
+
   sudo cp systemd/cpu-lcd-monitor.service /etc/systemd/system/
   sudo systemctl daemon-reload
   sudo systemctl enable cpu-lcd-monitor
   sudo systemctl start cpu-lcd-monitor
 
 ### Usage
-
-The display shows:
-
-┌──────────────────┐
-
-│CPU Temp: 45.2 C  │
-│Load: 23%    [=]  │
-
-└──────────────────┘
 
 **Load Indicators:**
 - `[_]` = 0-25% (Idle)
@@ -106,13 +101,17 @@ The display shows:
 ### Step 3: Python Dependencies
 
 **Ubuntu/Debian (recommended)**
+
   sudo apt install python3-serial python3-psutil
 
 **Or using pip**
+
   pip3 install -r requirements.txt
 
 **Add user to dialout group for USB access**
+
   sudo usermod -a -G dialout $USER
+  
 **Log out and back in for this to take effect**
 
 ### Step 4. Test Run
