@@ -42,10 +42,10 @@ Real-time CPU temperature and load monitoring on LCD display via Arduino Pro Mic
 ### 2. Python Setup
 
 **Install dependencies**
-  sudo apt install python3-serial python3-psutil
+    sudo apt install python3-serial python3-psutil
 
 **Or using pip**
-  pip3 install -r requirements.txt
+    pip3 install -r requirements.txt
 
 ## Run
 
@@ -63,8 +63,10 @@ Real-time CPU temperature and load monitoring on LCD display via Arduino Pro Mic
 The display shows:
 
 ┌──────────────────┐
+
 │CPU Temp: 45.2 C  │
 │Load: 23%    [=]  │
+
 └──────────────────┘
 
 **Load Indicators:**
@@ -121,47 +123,6 @@ The display shows:
 **Run the monitor**
   python3 python/cpu_monitor.py
 
-You should see:
-
-  CPU Monitor v2.0 - Temperature + Load
-  ========================================
-  Found Arduino: /dev/ttyACM0 - SparkFun Pro Micro
-  Connecting to /dev/ttyACM0...
-  Connected!
-  CPU: 45.2°C, Load: 23%
-
-### Step 5. Install as System Service (Optional)
-
-**Copy service file**
-  sudo cp systemd/cpu-lcd-monitor.service /etc/systemd/system/
-
-**Edit the service file to match your paths**
-  sudo nano /etc/systemd/system/cpu-lcd-monitor.service
-
-**Enable and start service**
-    sudo systemctl daemon-reload
-    sudo systemctl enable cpu-lcd-monitor.service
-    sudo systemctl start cpu-lcd-monitor.service
-
-**Check status**
-    sudo systemctl status cpu-lcd-monitor.service
-
-## Configuration
-
-### Change Temperature Sensor
-
-Edit python/cpu_monitor.py, find the get_cpu_temperature() function:
-
-**Default: uses x86_pkg_temp (CPU package temperature)**
-**Alternative: use specific thermal zone**
-    with open('/sys/class/thermal/thermal_zone0/temp', 'r') as f:
-      return int(f.read().strip()) / 1000
-
-      Adjust Update Interval
-      The default update interval is 1 second. The CPU load measurement takes 1 second, so this is optimal. To change it, modify the interval parameter in get_cpu_load().
-      Change I2C Address
-      If your LCD has a different I2C address (some use 0x3F instead of 0x27):
-      // In Arduino sketch, change:
       LiquidCrystal_I2C lcd(0x27, 16, 2);
       // To:
       LiquidCrystal_I2C lcd(0x3F, 16, 2);
