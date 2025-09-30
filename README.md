@@ -94,6 +94,7 @@ Real-time CPU temperature and load monitoring on LCD display via Arduino Pro Mic
   4. Upload Sketch
 
 **Open the sketch**
+  
   arduino/cpu_monitor/cpu_monitor.ino
 
 **Click Upload (→) or press Ctrl+U**
@@ -120,8 +121,5 @@ Real-time CPU temperature and load monitoring on LCD display via Arduino Pro Mic
   chmod +x python/cpu_monitor.py
 
 **Run the monitor**
-  python3 python/cpu_monitor.py
 
-      LiquidCrystal_I2C lcd(0x27, 16, 2);
-      // To:
-      LiquidCrystal_I2C lcd(0x3F, 16, 2);
+  python3 python/cpu_monitor.py
