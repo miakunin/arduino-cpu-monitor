@@ -40,7 +40,7 @@ Real-time CPU temperature and load monitoring on LCD display via Arduino Pro Mic
 4. Upload sketch
 
 ### 2. Python Setup
-```bash
+
 # Install dependencies
 sudo apt install python3-serial python3-psutil
 
@@ -76,9 +76,9 @@ The display shows:
 ## 🚀 Installation
 
 ### Step 1: Clone the Repository
-```bash
-git clone https://github.com/yourusername/arduino-cpu-monitor.git
-cd arduino-cpu-monitor
+
+  git clone https://github.com/yourusername/arduino-cpu-monitor.git
+  cd arduino-cpu-monitor
 
 ### Step 2: Arduino Setup
 
