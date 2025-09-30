@@ -197,10 +197,10 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ## Author
 
-Your Name - [@yourusername](https://github.com/yourusername)
+Maksim Iakunin - [@miakunin](https://github.com/miakunin)
 
 ## Links
 
-- [Project Repository](https://github.com/yourusername/arduino-cpu-monitor)
-- [Issues](https://github.com/yourusername/arduino-cpu-monitor/issues)
+- [Project Repository](https://github.com/miakunin/arduino-cpu-monitor)
+- [Issues](https://github.com/miakunin/arduino-cpu-monitor/issues)
 - [Arduino IDE Download](https://www.arduino.cc/en/software)
