@@ -2,8 +2,6 @@
 
 Real-time CPU temperature and load monitoring on LCD display via Arduino Pro Micro.
 
-![Project Photo](docs/images/result.jpg)
-
 ## Features
 
 - 🌡️ Real-time CPU temperature monitoring
@@ -27,8 +25,6 @@ Real-time CPU temperature and load monitoring on LCD display via Arduino Pro Mic
 | GND     | GND             |
 | SDA     | Pin 2           |
 | SCL     | Pin 3           |
-
-![Wiring Diagram](docs/images/wiring.png)
 
 ## Installation
 
